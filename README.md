@@ -13,3 +13,7 @@ b. It means both programs are connecting to the same RabbitMQ message broker ins
 ![](assets/2.png)
 
 The terminals demonstrate successful event-driven communication. The left terminal shows the publisher executing, while the right terminal displays the subscriber receiving 5 user creation messages. Each message contains a user ID and name, confirming that the data was successfully transmitted from publisher to subscriber through the RabbitMQ message broker.
+
+## Monitoring chart based on publisher
+
+![](assets/3.png)
