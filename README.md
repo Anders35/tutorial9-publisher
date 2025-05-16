@@ -24,3 +24,10 @@ The terminals demonstrate successful event-driven communication. The left termin
 
 The total number of queue depends on how many times we run `cargo run`. In the example, the publisher ran 5 times, sending 25 messages in total. Out of this, 5 messages are being processed, and 20 messages remain in the queue. That's why the number of queue is 20. In my case, the number of queue is 10 because I ran the publisher 3 times, sending 15 messages in total. Out of this, 5 messages are being processed, and 10 messages remain in the queue.
 
+## Running at least three subscribers
+
+![](assets/5.png)
+
+When multiple subscribers are connected to the same queue in an event-driven architecture, the workload is distributed among them, allowing messages to be processed concurrently and more efficiently. By spawning multiple subscriber instances, the queue's size reduces faster because RabbitMQ splits the messages among the connected subscribers in a round-robin fashion.
+
+There are several potential improvements that could be made. The publisher could benefit from batch publishing capabilities, better error handling, retry mechanisms, and message prioritization. The subscriber code could be enhanced with graceful shutdown mechanisms, improved error recovery, and configurable concurrency limits.
