@@ -17,3 +17,10 @@ The terminals demonstrate successful event-driven communication. The left termin
 ## Monitoring chart based on publisher
 
 ![](assets/3.png)
+
+## Simulation slow subscriber
+
+![](assets/4.png)
+
+The total number of queue depends on how many times we run `cargo run`. In the example, the publisher ran 5 times, sending 25 messages in total. Out of this, 5 messages are being processed, and 20 messages remain in the queue. That's why the number of queue is 20. In my case, the number of queue is 10 because I ran the publisher 3 times, sending 15 messages in total. Out of this, 5 messages are being processed, and 10 messages remain in the queue.
+
